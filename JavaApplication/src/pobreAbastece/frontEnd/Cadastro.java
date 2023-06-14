@@ -12,11 +12,9 @@ import pobreAbastece.backEnd.entidades.ClienteDAO;
  * @author gabri
  */
 public class Cadastro extends javax.swing.JFrame {
+     
+
     ClienteDAO clienteD = new ClienteDAO();
-    Cliente cliente = new Cliente();
-    /**
-     * Creates new form Cadastro
-     */
     public Cadastro() {
         initComponents();
     }
@@ -175,25 +173,17 @@ public class Cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoActionPerformed
-        String nome = campoNome.getText();
-        String sobrenome = campoSobrenome.getText();
-        String cpf = campoCpf.getText();
-        String localizacao = campoLocalizacao.getText();
-        String login = campoLogin.getText();
-        String senha = new String (campoSenha.getPassword());
-
-        cliente.setNome(nome);
-        cliente.setSobrenome(sobrenome);
-        cliente.setCpf(cpf);
-        cliente.setLocalizacao(localizacao);
-        cliente.setLogin(login);
-        cliente.setSenha(senha);
-
+        Cliente cliente = new Cliente();
+        
+        cliente.setNome( campoNome.getText());
+        cliente.setSobrenome( campoSobrenome.getText());
+        cliente.setCpf(campoCpf.getText());
+        cliente.setLocalizacao(campoLocalizacao.getText());
+        cliente.setLogin(campoLogin.getText());
+        cliente.setSenha( new String (campoSenha.getPassword()));
+    
         clienteD.adicionarCliente(cliente);
         
-        Login frame = new Login();
-        frame.setVisible(true);
-        this.dispose();
     }//GEN-LAST:event_botaoActionPerformed
 
     private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed

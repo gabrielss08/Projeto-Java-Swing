@@ -6,7 +6,6 @@
 package pobreAbastece.frontEnd;
 
 import javax.swing.JOptionPane;
-import pobreAbastece.backEnd.entidades.Cliente;
 import pobreAbastece.backEnd.entidades.ClienteDAO;
 
 /**
@@ -14,8 +13,7 @@ import pobreAbastece.backEnd.entidades.ClienteDAO;
  * @author gabri
  */
 public class Login extends javax.swing.JFrame {
-    ClienteDAO cli = new ClienteDAO();
-    Cliente cliente = new Cliente();
+    ClienteDAO clienteDAO;
     /** Creates new form NewJFrame */
     public Login() {
         initComponents();
@@ -194,6 +192,7 @@ public class Login extends javax.swing.JFrame {
 
     private void botaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoActionPerformed
 
+        clienteDAO = new ClienteDAO();
         String loginf = campoUser.getText();
         String senhaf = new String(campoSenha.getPassword());
 
@@ -201,16 +200,19 @@ public class Login extends javax.swing.JFrame {
             || senhaf.isEmpty()){
             JOptionPane.showMessageDialog(this, "Informe login e senha",
                 "Dados invalidos", JOptionPane.ERROR_MESSAGE);
-        }else{
-            if(senhaf.equals("123") && loginf.equals("admin")){
-                Principal tela = new Principal();
-                tela.setVisible(true);
-                this.dispose();
-            }else{
-                JOptionPane.showMessageDialog(this, "Login ou senha invalidos",
-                    "Dados invalidos", JOptionPane.ERROR_MESSAGE);
-            }
         }
+        
+        if(clienteDAO.loginCliente(loginf, senhaf)){
+            clienteDAO.buscarCliente(loginf, senhaf);
+            Principal tela = new Principal();
+            tela.setVisible(true);
+            this.dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Login ou senha invalidos",
+                "Dados invalidos", JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_botaoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
