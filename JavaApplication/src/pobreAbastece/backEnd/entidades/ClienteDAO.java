@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class ClienteDAO {
 
-    List<Cliente> lista = new ArrayList<>();
+    static List<Cliente> lista = new ArrayList<>();
 
     public ClienteDAO() {
     }
