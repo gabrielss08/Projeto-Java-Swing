@@ -265,10 +265,10 @@ public class Posto extends javax.swing.JFrame {
     private void tabelaPostosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaPostosMouseClicked
         if(tabelaPostos.getSelectedRow() != -1){
             jcampoNome.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 0).toString());
-            jcampoEndereco.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 0).toString());
-            jcampoEtanol.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 0).toString());
-            jcampoGasolina.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 0).toString());
-            jcampoDiesel.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 0).toString());
+            jcampoEndereco.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 1).toString());
+            jcampoEtanol.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 2).toString());
+            jcampoGasolina.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 3).toString());
+            jcampoDiesel.setText(tabelaPostos.getValueAt(tabelaPostos.getSelectedRow(), 4).toString());
         }
     }//GEN-LAST:event_tabelaPostosMouseClicked
 
