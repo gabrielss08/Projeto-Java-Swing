@@ -29,20 +29,20 @@ public class Cadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        botao = new javax.swing.JToggleButton();
-        campoSobrenome = new javax.swing.JTextField();
-        campoSenha = new javax.swing.JPasswordField();
-        campoCpf = new javax.swing.JTextField();
-        campoLocalizacao = new javax.swing.JTextField();
+        logo = new javax.swing.JLabel();
+        nomeTxt = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
+        sobrenomeTxt = new javax.swing.JLabel();
+        campoSobrenome = new javax.swing.JTextField();
+        cpfTxt = new javax.swing.JLabel();
+        campoCpf = new javax.swing.JTextField();
+        cepTxt = new javax.swing.JLabel();
+        campoLocalizacao = new javax.swing.JTextField();
+        loginTxt = new javax.swing.JLabel();
         campoLogin = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        senhaTxt = new javax.swing.JLabel();
+        campoSenha = new javax.swing.JPasswordField();
+        btnCadastrar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -50,14 +50,9 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        botao.setText("Cadastrar");
-        botao.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        botao.setContentAreaFilled(false);
-        botao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoActionPerformed(evt);
-            }
-        });
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/logoPa.png"))); // NOI18N
+
+        nomeTxt.setText("Nome");
 
         campoNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,19 +60,24 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Nome");
+        sobrenomeTxt.setText("Sobrenome");
 
-        jLabel2.setText("Sobrenome");
+        cpfTxt.setText("CPF");
 
-        jLabel3.setText("CPF");
+        cepTxt.setText("CEP");
 
-        jLabel4.setText("CEP");
+        loginTxt.setText("Usuário");
 
-        jLabel5.setText("Usuário");
+        senhaTxt.setText("Senha");
 
-        jLabel6.setText("Senha");
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/logoPa.png"))); // NOI18N
+        btnCadastrar.setText("Cadastrar");
+        btnCadastrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnCadastrar.setContentAreaFilled(false);
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -91,55 +91,55 @@ public class Cadastro extends javax.swing.JFrame {
                             .addComponent(campoSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(campoCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)
+                                .addComponent(cpfTxt)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(sobrenomeTxt, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nomeTxt, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cepTxt, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(senhaTxt, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(loginTxt, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(campoLocalizacao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                                     .addComponent(campoNome, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(campoLogin, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoSenha, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(botao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                    .addComponent(campoSenha, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(137, 137, 137)
-                        .addComponent(jLabel7)))
+                        .addComponent(logo)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jLabel7)
+                .addComponent(logo)
                 .addGap(50, 50, 50)
-                .addComponent(jLabel1)
+                .addComponent(nomeTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(sobrenomeTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoSobrenome, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(cpfTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(cepTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoLocalizacao, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addGap(47, 47, 47)
+                .addComponent(loginTxt)
                 .addGap(5, 5, 5)
                 .addComponent(campoLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
+                .addComponent(senhaTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(botao, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -157,7 +157,7 @@ public class Cadastro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoActionPerformed
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         Cliente cliente = new Cliente();
         
         cliente.setNome( campoNome.getText());
@@ -172,7 +172,7 @@ public class Cadastro extends javax.swing.JFrame {
         Login2 tela = new Login2();
         tela.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_botaoActionPerformed
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
         // TODO add your handling code here:
@@ -214,20 +214,20 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton botao;
+    private javax.swing.JToggleButton btnCadastrar;
     private javax.swing.JTextField campoCpf;
     private javax.swing.JTextField campoLocalizacao;
     private javax.swing.JTextField campoLogin;
     private javax.swing.JTextField campoNome;
     private javax.swing.JPasswordField campoSenha;
     private javax.swing.JTextField campoSobrenome;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel cepTxt;
+    private javax.swing.JLabel cpfTxt;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel loginTxt;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel nomeTxt;
+    private javax.swing.JLabel senhaTxt;
+    private javax.swing.JLabel sobrenomeTxt;
     // End of variables declaration//GEN-END:variables
 }
