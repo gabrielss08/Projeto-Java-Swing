@@ -4,7 +4,7 @@
  */
 package pobreAbastece.backEnd.main;
 
-import pobreAbastece.frontEnd.Login;
+import pobreAbastece.frontEnd.login.Login;
 
 /**
  *

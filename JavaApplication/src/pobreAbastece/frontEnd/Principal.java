@@ -4,6 +4,7 @@
  */
 package pobreAbastece.frontEnd;
 
+import pobreAbastece.frontEnd.posto.Posto;
 import pobreAbastece.backEnd.entidades.Cliente;
 import pobreAbastece.backEnd.entidades.ClienteDAO;
 
@@ -31,119 +32,132 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        javax.swing.JLabel nome = new javax.swing.JLabel();
+        jPanel = new javax.swing.JPanel();
+        botaoSobre = new javax.swing.JButton();
+        botaoSite = new javax.swing.JButton();
+        botaoPosto = new javax.swing.JButton();
+        botaoCarros = new javax.swing.JButton();
+        botaoUser = new javax.swing.JButton();
+        painelFoto = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 153, 51));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/newpackage/logo.png"))); // NOI18N
+        botaoSobre.setBackground(new java.awt.Color(255, 255, 0));
+        botaoSobre.setText("Sobre");
+        botaoSobre.setBorder(null);
+        botaoSobre.setBorderPainted(false);
+        botaoSobre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel.add(botaoSobre, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 130, 80));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, "Cotia", "4,99999", "3,99999", "5,9999"},
-                {null, "Vargem grande paulista", "4,99999", "4,99999", "4,99999"},
-                {null, "cotia", "4,99999", "4,99999", "4,99999"},
-                {null, "Itapevi", "4,99999", "4,99999", "4,99999"}
-            },
-            new String [] {
-                "Nome", "Local", "Gasolina", "Etanol", "Diesel"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
+        botaoSite.setBackground(new java.awt.Color(102, 102, 255));
+        botaoSite.setText("Site");
+        botaoSite.setBorder(null);
+        botaoSite.setBorderPainted(false);
+        botaoSite.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel.add(botaoSite, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, 130, 70));
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTable2.setCellSelectionEnabled(true);
-        jTable2.setDoubleBuffered(true);
-        jTable2.setDragEnabled(true);
-        jTable2.setFillsViewportHeight(true);
-        jTable2.setFocusCycleRoot(true);
-        jTable2.setFocusTraversalPolicyProvider(true);
-        jTable2.setInheritsPopupMenu(true);
-        jTable2.setShowGrid(true);
-        jTable2.setSurrendersFocusOnKeystroke(true);
-        jScrollPane2.setViewportView(jTable2);
-
-        jLabel1.setText("Olá");
-
-        nome.setText("jLabel3");
-        nome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        nome.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                nomeInputMethodTextChanged(evt);
+        botaoPosto.setBackground(new java.awt.Color(102, 204, 255));
+        botaoPosto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/postoIcon.png"))); // NOI18N
+        botaoPosto.setText("Postos");
+        botaoPosto.setBorder(null);
+        botaoPosto.setBorderPainted(false);
+        botaoPosto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoPosto.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botaoPosto.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        botaoPosto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoPostoActionPerformed(evt);
             }
         });
+        jPanel.add(botaoPosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 330, 160));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(nome))
-                    .addComponent(jLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        botaoCarros.setBackground(new java.awt.Color(102, 255, 102));
+        botaoCarros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/carroIcon.png"))); // NOI18N
+        botaoCarros.setText("Carros");
+        botaoCarros.setBorder(null);
+        botaoCarros.setBorderPainted(false);
+        botaoCarros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoCarros.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botaoCarros.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        botaoCarros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCarrosActionPerformed(evt);
+            }
+        });
+        jPanel.add(botaoCarros, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 330, 130));
+
+        botaoUser.setBackground(new java.awt.Color(255, 153, 0));
+        botaoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/user.png"))); // NOI18N
+        botaoUser.setText("Usuário");
+        botaoUser.setBorder(null);
+        botaoUser.setBorderPainted(false);
+        botaoUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoUser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botaoUser.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        botaoUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoUserActionPerformed(evt);
+            }
+        });
+        jPanel.add(botaoUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 220, 300));
+
+        painelFoto.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/logoPa.png"))); // NOI18N
+
+        javax.swing.GroupLayout painelFotoLayout = new javax.swing.GroupLayout(painelFoto);
+        painelFoto.setLayout(painelFotoLayout);
+        painelFotoLayout.setHorizontalGroup(
+            painelFotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelFotoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(nome))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(394, Short.MAX_VALUE))
+        painelFotoLayout.setVerticalGroup(
+            painelFotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelFotoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel.add(painelFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, 130, 130));
+
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/logo.png"))); // NOI18N
+        jPanel.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 310, 120));
+
+        fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/fundoPagPrincipal.png"))); // NOI18N
+        jPanel.add(fundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 600));
+
+        getContentPane().add(jPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_nomeInputMethodTextChanged
-      
-        nome = cliente.getNome();
-    }//GEN-LAST:event_nomeInputMethodTextChanged
+    private void botaoCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCarrosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoCarrosActionPerformed
+
+    private void botaoPostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPostoActionPerformed
+        Posto frame = new Posto();
+        frame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoPostoActionPerformed
+
+    private void botaoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,18 +187,21 @@ public class Principal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Principal().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Principal().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JButton botaoCarros;
+    private javax.swing.JButton botaoPosto;
+    private javax.swing.JButton botaoSite;
+    private javax.swing.JButton botaoSobre;
+    private javax.swing.JButton botaoUser;
+    private javax.swing.JLabel fundo;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel;
+    private javax.swing.JLabel logo;
+    private javax.swing.JPanel painelFoto;
     // End of variables declaration//GEN-END:variables
 }
