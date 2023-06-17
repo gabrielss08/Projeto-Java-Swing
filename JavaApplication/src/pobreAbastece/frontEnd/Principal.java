@@ -7,6 +7,7 @@ package pobreAbastece.frontEnd;
 import pobreAbastece.frontEnd.posto.Posto;
 import pobreAbastece.backEnd.entidades.Cliente;
 import pobreAbastece.backEnd.entidades.ClienteDAO;
+import pobreAbastece.frontEnd.usuario.Usuario;
 
 /**
  *
@@ -156,7 +157,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoPostoActionPerformed
 
     private void botaoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUserActionPerformed
-        // TODO add your handling code here:
+        Usuario user = new Usuario();
+        user.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botaoUserActionPerformed
 
     /**

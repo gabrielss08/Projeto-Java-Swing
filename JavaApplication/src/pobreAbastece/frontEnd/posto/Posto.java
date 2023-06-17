@@ -243,6 +243,8 @@ public class Posto extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null, "Selecione um posto para para excluir");
         }
+        
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
