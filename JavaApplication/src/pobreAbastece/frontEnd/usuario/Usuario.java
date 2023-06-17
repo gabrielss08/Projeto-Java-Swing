@@ -158,8 +158,8 @@ public class Usuario extends javax.swing.JFrame {
             File file = fileChooser.getSelectedFile();
             txtFile.setText(file.getPath());
             foto.setIcon(new ImageIcon(file.getPath()));
+            
         }
-        File file = fileChooser.getSelectedFile();//
                 	 
     }//GEN-LAST:event_bntArquivoActionPerformed
 
