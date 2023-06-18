@@ -169,7 +169,7 @@ public class Cadastro extends javax.swing.JFrame {
     
         clienteD.adicionarCliente(cliente);
     
-        Login2 tela = new Login2();
+        Login tela = new Login();
         tela.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCadastrarActionPerformed
