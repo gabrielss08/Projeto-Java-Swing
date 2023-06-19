@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import pobreAbastece.frontEnd.posto.Posto;
 import pobreAbastece.backEnd.entidades.Cliente;
 import pobreAbastece.backEnd.entidades.ClienteDAO;
-import pobreAbastece.frontEnd.usuario.Usuario;
+import pobreAbastece.frontEnd.funcionario.Funcionario;
 
 /**
  *
@@ -109,7 +109,7 @@ public class Principal extends javax.swing.JFrame {
 
         botaoUser.setBackground(new java.awt.Color(255, 153, 0));
         botaoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pobreAbastece/frontEnd/icons/user.png"))); // NOI18N
-        botaoUser.setText("Usuário");
+        botaoUser.setText("funcionarios");
         botaoUser.setBorder(null);
         botaoUser.setBorderPainted(false);
         botaoUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -170,7 +170,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoPostoActionPerformed
 
     private void botaoUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoUserActionPerformed
-        Usuario user = new Usuario();
+        Funcionario user = new Funcionario();
         user.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoUserActionPerformed

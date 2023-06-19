@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package pobreAbastece.frontEnd.usuario;
+package pobreAbastece.frontEnd.funcionario;
 
 import java.io.File;
 import javax.swing.ImageIcon;
@@ -16,13 +16,13 @@ import pobreAbastece.frontEnd.Principal;
  *
  * @author gabri
  */
-public class Usuario extends javax.swing.JFrame {
+public class Funcionario extends javax.swing.JFrame {
     ClienteDAO dao = new ClienteDAO();
     Cliente cli = new Cliente();
     /**
      * Creates new form NewJFrame
      */
-    public Usuario() {
+    public Funcionario() {
         initComponents();
     }
 
@@ -45,7 +45,7 @@ public class Usuario extends javax.swing.JFrame {
         cpfText = new javax.swing.JLabel();
         cCep = new javax.swing.JTextField();
         cepText = new javax.swing.JLabel();
-        btnMudar = new javax.swing.JButton();
+        btnCcad = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         userLogo = new javax.swing.JLabel();
 
@@ -85,9 +85,15 @@ public class Usuario extends javax.swing.JFrame {
 
         cpfText.setText("Cpf");
 
-        cepText.setText("Cep");
+        cCep.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cCepActionPerformed(evt);
+            }
+        });
 
-        btnMudar.setText("Mudar Cadastro");
+        cepText.setText("Salario");
+
+        btnCcad.setText("Cadastrar Funcionario");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,19 +102,21 @@ public class Usuario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cCep, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
+                    .addComponent(cSobrenome)
+                    .addComponent(cCpf)
+                    .addComponent(cNome)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnMudar, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cepText)
                             .addComponent(cpfText)
                             .addComponent(sobrenomeText)
-                            .addComponent(nomeText))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(cSobrenome)
-                    .addComponent(cCpf)
-                    .addComponent(cNome))
+                            .addComponent(nomeText)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(cCep, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnCcad, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 3, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -116,7 +124,7 @@ public class Usuario extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
+                .addGap(121, 121, 121)
                 .addComponent(nomeText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cNome, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -131,10 +139,10 @@ public class Usuario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cepText)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cCep, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
-                .addComponent(btnMudar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnCcad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cCep, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 600));
@@ -153,9 +161,9 @@ public class Usuario extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(198, 198, 198)
                 .addComponent(userLogo)
-                .addContainerGap(377, Short.MAX_VALUE))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 270, 600));
@@ -180,6 +188,10 @@ public class Usuario extends javax.swing.JFrame {
          
     }//GEN-LAST:event_cNomeAncestorAdded
 
+    private void cCepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCepActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cCepActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -197,25 +209,27 @@ public class Usuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Usuario().setVisible(true);
+            new Funcionario().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMudar;
+    private javax.swing.JButton btnCcad;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JTextField cCep;
     private javax.swing.JTextField cCpf;
