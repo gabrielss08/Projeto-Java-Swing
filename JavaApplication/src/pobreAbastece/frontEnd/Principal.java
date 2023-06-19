@@ -4,6 +4,7 @@
  */
 package pobreAbastece.frontEnd;
 
+import javax.swing.JOptionPane;
 import pobreAbastece.frontEnd.posto.Posto;
 import pobreAbastece.backEnd.entidades.Cliente;
 import pobreAbastece.backEnd.entidades.ClienteDAO;
@@ -57,6 +58,11 @@ public class Principal extends javax.swing.JFrame {
         botaoSobre.setBorder(null);
         botaoSobre.setBorderPainted(false);
         botaoSobre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSobreActionPerformed(evt);
+            }
+        });
         jPanel.add(botaoSobre, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 130, 80));
 
         botaoSite.setBackground(new java.awt.Color(102, 102, 255));
@@ -64,6 +70,11 @@ public class Principal extends javax.swing.JFrame {
         botaoSite.setBorder(null);
         botaoSite.setBorderPainted(false);
         botaoSite.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoSite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSiteActionPerformed(evt);
+            }
+        });
         jPanel.add(botaoSite, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, 130, 70));
 
         botaoPosto.setBackground(new java.awt.Color(102, 204, 255));
@@ -147,7 +158,9 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCarrosActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "A opção carros ainda está em desenvolvimento,"
+                + " com ela planejamos o usuário poder acompanhar status do carro como data da troca de oleo entre outros ",
+                "Desculpe", JOptionPane.OK_OPTION);
     }//GEN-LAST:event_botaoCarrosActionPerformed
 
     private void botaoPostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPostoActionPerformed
@@ -161,6 +174,17 @@ public class Principal extends javax.swing.JFrame {
         user.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botaoUserActionPerformed
+
+    private void botaoSiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSiteActionPerformed
+        JOptionPane.showMessageDialog(this, "Nosso site ainda está em desenvolvimento em breve estará disponivel para o usuário",
+                "Desculpe", JOptionPane.OK_OPTION);
+    }//GEN-LAST:event_botaoSiteActionPerformed
+
+    private void botaoSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSobreActionPerformed
+        Sobre sobre = new Sobre();
+        sobre.setVisible(true);
+        
+    }//GEN-LAST:event_botaoSobreActionPerformed
 
     /**
      * @param args the command line arguments

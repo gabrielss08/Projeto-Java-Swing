@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Com o atual cen&#xe1;rio de p&#xf3;s pandemia com um dos maiores pre&#xe7;os de combust&#xed;vel da hist&#xf3;ria mundial, &#xa;temos que saber os melhores pre&#xe7;os do combust&#xed;vel n&#xe3;o abrindo m&#xe3;o da qualidade, j&#xe1; que o combust&#xed;vel &#xa;&#xe9; algo essencial para a locomo&#xe7;&#xe3;o da popula&#xe7;&#xe3;o Brasileira j&#xe1; que muitos n&#xe3;o podem depender de transporte &#xa;p&#xfa;blico, precisamos mapear os postos de combust&#xed;vel com os melhores custo benef&#xed;cio mantendo uma qualidade&#xa; m&#xed;nima desejada, oferecendo servi&#xe7;os e apresenta&#xe7;&#xe3;o mais completa do posto com tudo que ele oferta para atender&#xa; melhor os clientes finais. Para isso oferecemos uma interface simples mostrando o nosso servi&#xe7;o principal que &#xe9; a&#xa; localiza&#xe7;&#xe3;o dos postos com o melhor pre&#xe7;o podendo ordenar ou pesquisar por um posto espec&#xed;fico ou combust&#xed;vel &#xa;espec&#xed;fico (ex.: Etanol, Gasolina, G&#xe1;s Natural e etc.), abrindo a oportunidade para o cliente descobrir mais servi&#xe7;os ou&#xa; produtos que o posto tem a oferecer com feedbacks de outros clientes que j&#xe1; o frequentaram, trazendo uma experi&#xea;ncia &#xa;mais familiar por ter outra pessoa que j&#xe1; tenha conhecido o posto e trazendo mais confian&#xe7;a que &#xe9; uma empresa s&#xe9;ria. "/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="OK"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="170" y="340" width="240" height="40"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="130" width="560" height="200"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Com o atual cen&#xe1;rio de p&#xf3;s pandemia com um dos maiores pre&#xe7;os de combust&#xed;vel da &#xa;hist&#xf3;ria mundial, temos que saber os melhores pre&#xe7;os do combust&#xed;vel n&#xe3;o abrindo &#xa;m&#xe3;o da qualidade, j&#xe1; que o combust&#xed;vel &#xe9; algo essencial para a locomo&#xe7;&#xe3;o da &#xa;popula&#xe7;&#xe3;o Brasileira j&#xe1; que muitos n&#xe3;o podem depender de transporte p&#xfa;blico, &#xa;precisamos mapear os postos de combust&#xed;vel com os melhores custo benef&#xed;cio &#xa;mantendo uma qualidade m&#xed;nima desejada, oferecendo servi&#xe7;os e apresenta&#xe7;&#xe3;o mais &#xa;completa do posto com tudo que ele oferta para atender melhor os clientes finais. Para &#xa;isso oferecemos uma interface simples mostrando o nosso servi&#xe7;o principal que &#xe9; a &#xa;localiza&#xe7;&#xe3;o dos postos com o melhor pre&#xe7;o podendo ordenar ou pesquisar por um &#xa;posto espec&#xed;fico ou combust&#xed;vel espec&#xed;fico (ex.: Etanol, Gasolina, G&#xe1;s Natural e etc.), &#xa;tem a oferecer com feedbacks de outros clientes que j&#xe1; o frequentaram, trazendo uma &#xa;experi&#xea;ncia mais familiar por ter outra pessoa que j&#xe1; tenha conhecido o posto e &#xa;trazendo mais confian&#xe7;a que &#xe9; uma empresa s&#xe9;ria.&#xa;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/pobreAbastece/frontEnd/icons/logo.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="150" y="-40" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/pobreAbastece/frontEnd/icons/fundo2.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="600" height="400"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel9"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="220" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+  </SubComponents>
+</Form>
