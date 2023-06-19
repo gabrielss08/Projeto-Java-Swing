@@ -74,4 +74,12 @@ public class ClienteDAO {
             count++;
         }
     }
+     
+     public String getClientes(){
+        for (Cliente cliente : lista){
+            return cliente.getNome();
+            }
+        return null;
+
+    }
 }
