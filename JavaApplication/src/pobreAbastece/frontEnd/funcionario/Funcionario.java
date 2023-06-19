@@ -17,8 +17,7 @@ import pobreAbastece.frontEnd.Principal;
  * @author gabri
  */
 public class Funcionario extends javax.swing.JFrame {
-    ClienteDAO dao = new ClienteDAO();
-    Cliente cli = new Cliente();
+
     /**
      * Creates new form NewJFrame
      */
@@ -182,8 +181,7 @@ public class Funcionario extends javax.swing.JFrame {
     }//GEN-LAST:event_cNomeActionPerformed
 
     private void cNomeAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_cNomeAncestorAdded
-         
-            cNome.setText(dao.getClientes());
+
          
          
     }//GEN-LAST:event_cNomeAncestorAdded
